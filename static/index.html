@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="./img/FavIcon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./StyleSheet/index.css">
+
+    <title>My List</title>
+
+    <script src="./script/bd.js"></script>
+
+</head>
+<body alt="light">
+    <!-- TOP LAYOUT -->
+    <div class="TopPage">
+
+        <div id="pageLogo" class="pageLogo">   
+
+            <img src="./img/LogoDark.png" alt="PageLogo" class="logo">  
+
+        </div>
+        
+
+        <div class="options">
+
+        <ul>
+
+            <li>
+                <div id="iconButton">
+                    <img src="./img/addIcon.png" alt="AddIcon" onclick="newItemFunction(1)" id="addIcon">
+                </div>
+            </li>     
+            <li>
+                <div id="button">
+                    <img src="./img/theme.png" alt="ThemeIcon" onclick="toggleThemeDark()" id="toggle" >
+                </div>
+            </li>
+            
+        </ul>
+
+        </div>
+
+    </div>
+    
+    <!-- TOP ENDS HERE -->
+
+    <!-- DATA LAYOUT -->
+
+    <div class="date" id="date">
+        
+    </div>
+
+    <script src="./script/dateScript.js"></script>
+
+    <!-- DATA ENDS HERE -->
+
+    <!-- LIST LAYOUT -->
+
+    <div class="content">
+
+        <div class="list" >
+            <ul id="list">
+                <li>
+                  <div class="item">
+                    <input type="checkbox" name="" id="">
+                    <span></span>
+                  </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- LIST ENDS HERE -->
+
+    <!-- SCRIPT -->
+    <script src="./script/newItem.js"></script>
+    <script src="./script/toggleTheme.js"></script>
+
+</body>
+</html>
