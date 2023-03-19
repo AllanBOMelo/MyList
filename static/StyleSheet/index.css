@@ -1,0 +1,122 @@
+@font-face {
+    font-family: Arimo;
+    src: url(../StyleSheet/font-family/Arimo-VariableFont_wght.ttf);
+}
+
+body {
+    margin: 0px !important;
+    background-color: #FDFDFD;
+    transition: .5s;
+}
+
+/* Top Page Section */
+
+
+.TopPage {
+    width: 100%;
+    height: 65px;
+    margin-bottom: 40px;
+    padding-top: 10px;
+    border-bottom: 1px solid #BB9A85;
+}
+
+.logo {
+    width: 200px;
+    margin-left: 20px;
+    transition: .5s;
+}
+
+.pageLogo {
+    display: inline-block;
+}
+
+.options {
+    float: right;
+    margin-right: 10px;
+}
+
+.options ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.options ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding-right: 15px;
+}
+
+.options ul li div {
+    position: relative;
+    display: inline-block;
+}
+
+.options ul li img {
+    width: 30px;
+    height: auto;
+    margin-top: 10px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.options ul li img:hover {
+    background-color: #00000015;
+    border: none;
+    border-radius: 5px;
+}
+
+
+/* Top Page Section Ends Here */
+
+
+
+/* Date Section */
+
+.date p {
+    width: 100%;
+    text-align: center;
+    font-family: Arimo;
+    font-size: 30px;
+    color: #2D2017;
+}
+
+.date a {
+    color: #FF6300;
+}
+
+/* Date Section Ends Here */
+
+
+/* Content Section */
+
+.content {
+    width: 55%;
+    border-top: 2px solid #bb9a85;
+    margin: 0 auto;
+}
+
+.lista ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.texto {
+    list-style-type: none;
+} 
+
+.lista ul li a {
+    display: inline-block;
+    font-family: Arimo;
+    font-size: 30px;
+    padding: 0px 40px 0px 40px;
+    border-right: 2px solid #bb9a85d7;
+}
+
+.lista ul li p {
+    display: inline-block;
+    font-size: 25px;
+    font-family: Arimo;
+    padding: 0px 40px 0px 40px;
+}
+
+/* Content Section Ends Here*/
