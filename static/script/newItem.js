@@ -1,9 +1,7 @@
 var quantidade = 0;
 
 
-function newItemFunction(x) {
-
-    var texto = prompt("Insira a tarefa");
+function newItemFunction(texto) {
 
     /* tags */
     var li = document.createElement('li');

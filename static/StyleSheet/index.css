@@ -42,57 +42,69 @@ body {
     box-shadow: 2px 2px rgba(0, 0, 0, 0.363);
 }
 
-.modal h3 {
+.modal form {
+    padding: 10px;
+}
+
+.modal form span {
     font-family: 'Arimo';
     color: #2D2017;
-    display: flex;
-    margin: 0 auto;
-    width: 180px;
-    padding-bottom: 10px;
-    justify-content: center;
-}
-
-.modal input {
+    font-size: 25px;
     display: block;
+    width: 153px;
     margin: 0 auto;
-    border: 2px solid #BB9A85;
+    padding-bottom: 10px;
+}
+
+.inputTask {
+    display: block;
+    width: 90%;
+    height: 10px;
+    margin: 0 auto;
+    border: none;
+    background-color: #f1f1f1;
+    padding: 10px;
     border-radius: 5px;
-    padding: 5px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.363);
 }
 
-.modal div {
-    margin: 0 auto;
-    width: 175px;
+.formOptions {
+    float: right;
+    width: 190px;
 }
 
-.modal div ul {
-    margin: 0px;
-    padding: 0px;
-}
-
-.modal div ul li {
-    list-style-type: none;
-    display: inline-block;
+.optionSend{
+    display: inline-block !important;
+    margin-top: 10px;
+    border: none;
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
     font-family: 'Arimo';
-}
-
-.modal div ul li p {
-    padding: 5px;
-    background-color: #ecebeb;
-    border-radius: 5px;
-    user-select: none;
-    cursor: pointer;
-    margin-right: 10px;
-}
-
-.modal div ul li a {
-    padding: 5px;
-    background-color: #FF6300;
+    font-size: 15px;
     color: #FAFAFA;
+    background-color: #FF6300;
+}
+
+.optionSend:hover {
+    background-color: #c94d00;
+}
+
+.optionCancel{
+    display: inline-block !important;
+    margin-top: 10px;
+    margin-right: 20px;
+    border: none;
+    height: 30px;
+    width: 80px;
     border-radius: 5px;
-    user-select: none;
-    cursor: pointer;
-    margin-left: 10px;
+    font-family: 'Arimo';
+    font-size: 15px;
+    color: #2D2017;
+}
+
+.optionCancel:hover {
+    background-color: #cecaca;
 }
 
 .TopPage {
