@@ -1,10 +1,9 @@
-var hora = "15:00";
 var quantidade = 0;
 
 
 function newItemFunction(x) {
 
-    var texto = 'Iniciar documentação do cliente'
+    var texto = prompt("Insira a tarefa");
 
     /* tags */
     var li = document.createElement('li');
@@ -29,8 +28,8 @@ var itemListPattern = function (texto) {
 
         
             '<div class="container">' +
-                '<input type="checkbox" id="check" name="check" onclick="risca(' + quantidade + ')">' +
-                '<label for="check" id="' + quantidade + '" style="text-decoration: none;">' + texto + '</label>' +
+                '<input type="checkbox" id="check'+ quantidade +'" name="check" onclick="cross(' + quantidade + ')">' +
+                '<label for="check'+ quantidade +'" id="' + quantidade + '" style="text-decoration: none;">' + texto + '</label>' +
             '</div>' 
             
         );

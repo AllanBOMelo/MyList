@@ -24,14 +24,14 @@
 
         </div>
         
-
+        
         <div class="options">
 
         <ul>
 
             <li>
                 <div id="iconButton">
-                    <img src="./img/addIcon.png" alt="AddIcon" onclick="newItemFunction()" id="addIcon">
+                    <img src="./img/addIcon.png" alt="AddIcon" onclick="openModalWindow()" id="addIcon">
                 </div>
             </li>     
             <li>
@@ -48,55 +48,58 @@
     
     <!-- TOP ENDS HERE -->
 
-    <!-- DATA LAYOUT -->
+    <div class="body">
 
-    <div class="date" id="date">
-        
-    </div>
+        <div class="janela-modal" id="janela-modal">
+            <div class="modal">
+                <h3>Insira a tarefa</h3>
+                <input type="text" name="" id="" placeholder="Aqui">
 
-    <script src="./script/dateScript.js"></script>
-
-    <!-- DATA ENDS HERE -->
-
-    <!-- LIST LAYOUT -->
-
-    <div class="content">
-
-        <div class="list" >
-            <ul id="list">
-                
-            </ul>
+                <div>
+                    <ul>
+                        <li>
+                            <p>Cancelar</p>
+                        </li>
+    
+                        <li>
+                            <a>Adicionar</a>
+                        </li>
+                    </ul>
+                </div>  
+            </div>
         </div>
 
+        <div class="date" id="date">
+        
+        </div>
+    
+        <script src="./script/dateScript.js"></script>
+    
+        <!-- DATA ENDS HERE -->
+    
+        <!-- LIST LAYOUT -->
+    
+        <div class="content">
+    
+            <div class="list" >
+                <ul id="list">
+                    
+                </ul>
+            </div>
+    
+        </div>
+    
+        <!-- LIST ENDS HERE -->
     </div>
+    <!-- DATA LAYOUT -->
 
-    <!-- LIST ENDS HERE -->
+    
 
     <!-- SCRIPT -->
     <script src="./script/newItem.js"></script>
     <script src="./script/toggleTheme.js"></script>
-    <script>
-        var risca = (idNumber) => {
-
-            var id = idNumber.toString();
-
-            if (document.getElementById(id).style.textDecoration === "line-through") {
-                document.getElementById(id).style.textDecoration = "none";
-            } else {
-                document.getElementById(id).style.textDecoration = "line-through";
-            }
-            
-        }
-    </script>
-
-    <script>
-        window.onload = function () {
-            url_ = location.href;
-            if (url_.indexOf("?f=on") != -1) {
-                document.getElementsByName("check")[0].checked = true;
-            }
-        }
-    </script>
+    <script src="./script/crossPhrase.js"></script>
+    <script src="./script/modalWindow.js"></script>
 
 </body>
 </html>
