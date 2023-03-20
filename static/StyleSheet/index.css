@@ -78,6 +78,7 @@ body {
     font-family: 'Arimo';
     font-size: 30px;
     color: #2D2017;
+    transition: 0.5s;
 }
 
 .date a {
@@ -108,8 +109,8 @@ body {
   margin-top: 20px;
   display: flex;
   align-items: center;
-  height: 40px;
-  width: 50%;
+  height: 80px;
+  width: 100%;
   position: relative;
   
 }
@@ -128,6 +129,7 @@ body {
     align-items: center;
     justify-content: center;
     outline: none;
+    position: absolute;
 }
 
 .container input[type="checkbox"]:after {
@@ -155,6 +157,8 @@ body {
     cursor: pointer;
     margin: 2px;
     user-select: none;
+    transition: 0.5s;
+    margin-left: 40px;
 }
 
 .textoDark li .container label{

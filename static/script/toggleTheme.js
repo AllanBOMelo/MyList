@@ -27,8 +27,3 @@ const addIcon = document.getElementById('addIcon');
 
         document.getElementById('list').classList.remove('textoDark');
     };
-
-
-    for (var i = 0; i < quantidade; i++) {
-
-    }

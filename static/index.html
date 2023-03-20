@@ -89,5 +89,14 @@
         }
     </script>
 
+    <script>
+        window.onload = function () {
+            url_ = location.href;
+            if (url_.indexOf("?f=on") != -1) {
+                document.getElementsByName("check")[0].checked = true;
+            }
+        }
+    </script>
+
 </body>
 </html>
