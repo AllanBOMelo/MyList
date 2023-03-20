@@ -1,53 +1,31 @@
 var hora = "15:00";
-var quantidade = 1;
+var quantidade = 0;
 
 function newItemFunction(x) {
     
     var texto = "teste";
     var lista = document.getElementById('list').innerHTML;
 
-
-    if (x==1) {
-        lista = lista + itemListPatternLight(texto);
+    lista = lista + itemListPattern(texto);
     
-        document.getElementById('list').innerHTML = lista;
-    }
-
-    if (x==2) {
-        lista = lista + itemListPatternDark(texto);
+    document.getElementById('list').innerHTML = lista;
     
-        document.getElementById('list').innerHTML = lista;
-    }
-    
-    quantidade =+ 1;
+    quantidade += 1;
 
 }
 
-var itemListPatternLight = function (texto) {
+var itemListPattern = function (texto) {
 
     return (
 
-        '<li class="texto">' + 
-        
-        '<p id="hora">' + hora + "</p>" + 
-        '<p id="texto">' + texto + "</p>" + 
-            
-        "</li>"
+        '<li>' +
+            '<div class="container">' +
+                '<input type="checkbox" id="check" onclick="risca(' + quantidade + ')">' +
+                '<label for="check" id="' + quantidade + '" style="text-decoration: none;">check</label>' +
+            '</div>' +
+        '</li>'
             
         );
 }
-
-var itemListPatternDark = function (texto) {
-
-    return (
-    
-        '<li class="texto">' + 
-            
-        '<p id="hora">' + hora + "</p>" + 
-        '<p id="texto">' + texto + "</p>" + 
-                
-        "</li>"
-                
-        );
-}    
+  
 

@@ -7,6 +7,7 @@
 
     <link rel="shortcut icon" href="./img/FavIcon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./StyleSheet/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>My List</title>
 
@@ -30,7 +31,7 @@
 
             <li>
                 <div id="iconButton">
-                    <img src="./img/addIcon.png" alt="AddIcon" onclick="newItemFunction(1)" id="addIcon">
+                    <img src="./img/addIcon.png" alt="AddIcon" onclick="newItemFunction()" id="addIcon">
                 </div>
             </li>     
             <li>
@@ -63,12 +64,7 @@
 
         <div class="list" >
             <ul id="list">
-                <li>
-                  <div class="item">
-                    <input type="checkbox" name="" id="">
-                    <span>aaaaaa</span>
-                  </div>
-                </li>
+                
             </ul>
         </div>
 
@@ -79,6 +75,19 @@
     <!-- SCRIPT -->
     <script src="./script/newItem.js"></script>
     <script src="./script/toggleTheme.js"></script>
+    <script>
+        var risca = (idNumber) => {
+
+            var id = idNumber.toString();
+
+            if (document.getElementById(id).style.textDecoration === "line-through") {
+                document.getElementById(id).style.textDecoration = "none";
+            } else {
+                document.getElementById(id).style.textDecoration = "line-through";
+            }
+            
+        }
+    </script>
 
 </body>
 </html>

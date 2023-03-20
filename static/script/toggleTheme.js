@@ -12,7 +12,7 @@ const addIcon = document.getElementById('addIcon');
         document.getElementById('pageLogo').innerHTML = '<img src="./img/LogoLight.png" alt="PageLogo" class="logo">';
         document.getElementById('iconButton').innerHTML = '<img src="./img/addIconLight.png" alt="AddIcon" onclick="newItemFunction(2)" id="addIcon">';
  
-        document.getElementById('list').classList.add('elementosDark');
+        document.getElementById('list').classList.add('textoDark');
     };
 
 
@@ -25,7 +25,7 @@ const addIcon = document.getElementById('addIcon');
         document.getElementById('pageLogo').innerHTML = '<img src="./img/LogoDark.png" alt="PageLogo" class="logo">';
         document.getElementById('iconButton').innerHTML = '<img src="./img/addIcon.png" alt="AddIcon" onclick="newItemFunction(1)" id="addIcon">';
 
-        document.getElementById('list').classList.remove('elementosDark');
+        document.getElementById('list').classList.remove('textoDark');
     };
 
 

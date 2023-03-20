@@ -75,7 +75,7 @@ body {
 .date p {
     width: 100%;
     text-align: center;
-    font-family: Arimo;
+    font-family: 'Arimo';
     font-size: 30px;
     color: #2D2017;
 }
@@ -100,35 +100,64 @@ body {
     padding: 0px;
 }
 
-.list ul li {
+.list ul li{
     list-style-type: none;
 } 
 
-.item {
-  height: 25px;
+.container {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  height: 40px;
   width: 50%;
   position: relative;
+  
 }
 
-.item span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
+.container input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    height: 40px;
+    width: 40px;
+    border: 2px solid #bb9a85;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
 }
 
-.item input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
+.container input[type="checkbox"]:after {
+    content: '\f00c';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 30px;
+    color: #FF6300;
+    display: none;
 }
 
-.elementosDark li label span{
+.container input[type="checkbox"]:hover {
+    background-color: #88746828; 
+}
+
+.container input[type="checkbox"]:checked:after {
+    display: block;
+}
+
+.container label {
+    padding-left: 20px;
+    color: #2D2017;
+    font-size: 2em;
+    font-family: Arimo;
+    cursor: pointer;
+    margin: 2px;
+    user-select: none;
+}
+
+.textoDark li .container label{
   color : #FAFAFA !important;
 }
 /* Content Section Ends Here*/
