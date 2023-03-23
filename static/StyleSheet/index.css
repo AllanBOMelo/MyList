@@ -16,7 +16,23 @@ body {
     height: 100%;
 }
 
-.janela-modal {
+/* Modal Window */
+
+.modal {
+    padding: 20px 10px 20px 10px;
+    width: 20%;
+    min-width: 300px;
+    background-color: #FAFAFA;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.363);
+}
+
+.modal form {
+    padding: 10px;
+}
+
+.modal-window {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.308);
     width: 100%;
@@ -32,20 +48,6 @@ body {
     display: flex ;
 }
 
-.modal {
-    padding: 20px 10px 20px 10px;
-    width: 20%;
-    min-width: 200px;
-    background-color: #FAFAFA;
-    border-radius: 15px;
-    position: relative;
-    box-shadow: 2px 2px rgba(0, 0, 0, 0.363);
-}
-
-.modal form {
-    padding: 10px;
-}
-
 .modal form span {
     font-family: 'Arimo';
     color: #2D2017;
@@ -56,6 +58,12 @@ body {
     padding-bottom: 10px;
 }
 
+.inputTaskLabel {
+    height: 30px;
+    width: 100%;
+    position: relative;
+}
+
 .inputTask {
     display: block;
     width: 90%;
@@ -63,12 +71,17 @@ body {
     margin: 0 auto;
     border: none;
     background-color: #f1f1f1;
-    padding: 10px;
+    padding: 10px 15px 10px 15px;
     border-radius: 5px;
     box-shadow: 2px 2px rgba(0, 0, 0, 0.363);
 }
 
+.inputTask:focus {
+    outline: none;
+}
+
 .formOptions {
+    padding-top: 9px;
     float: right;
     width: 190px;
 }
@@ -106,6 +119,25 @@ body {
 .optionCancel:hover {
     background-color: #cecaca;
 }
+
+.character-counter {
+    width: 30px;
+    height: 12px;
+    resize: none;
+    overflow:hidden;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    right: 0px;
+    bottom: -17px;
+    font-family: 'Arimo';
+    font-size: 10px;
+    color: #cecaca;
+    text-align: right;
+    transition: .9s;
+}
+
+/* Modal Window Ends here*/
 
 .TopPage {
     width: 100%;
@@ -201,11 +233,13 @@ body {
     list-style-type: none;
 } 
 
+
+/* Item container */
 .container {
   margin-top: 20px;
   display: flex;
   align-items: center;
-  height: 80px;
+  height: 20px;
   width: 100%;
   position: relative;
   
@@ -214,8 +248,8 @@ body {
 .container input[type="checkbox"] {
     appearance: none;
     -webkit-appearance: none;
-    height: 40px;
-    width: 40px;
+    height: 25px;
+    width: 25px;
     border: 2px solid #bb9a85;
     background-color: transparent;
     border-radius: 5px;
@@ -232,7 +266,7 @@ body {
     content: '\f00c';
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
-    font-size: 30px;
+    font-size: 20px;
     color: #FF6300;
     display: none;
 }
@@ -248,16 +282,91 @@ body {
 .container label {
     padding-left: 20px;
     color: #2D2017;
-    font-size: 2em;
-    font-family: Arimo;
+    font-size: clamp(16px, 2vw, 20px);
+    font-family: 'Arimo';
     cursor: pointer;
     margin: 2px;
     user-select: none;
     transition: 0.5s;
-    margin-left: 40px;
+    margin-left: 20px;
+    margin-right: 10px;
+    width: 100%;
+}
+
+.container img {
+    height: auto;
+    width: 25px;
+    right: 1px;
+    position: relative;
+    cursor: pointer;
+    border: 5px solid transparent;
+}
+
+.container img:hover {
+    background-color: #00000010;
+    border: 5px solid transparent;
+    border-radius: 5px;
+}
+
+.edit-task-modal-window {
+    display: none;
+}
+
+.edit-task {
+    width: 250px;
+    height: 40px;
+    position: absolute;
+    right: 1px;
+    bottom: -20px;
+    background-color: #bb9a85;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.openEditTask {
+    display: inline-block;
+}
+
+.edit-task input {
+    margin: 10px 5px 0px 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.edit-task input:focus {
+    outline: none;
+}
+
+.edit-task button {
+   border: none;
+   border-radius: 5px;
+   width: 50px;
+   height: 20px;
+}
+
+.character-counter-edit-task {
+    width: 30px;
+    height: 12px;
+    resize: none;
+    overflow:hidden;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    right: 0px;
+    bottom: -17px;
+    font-family: 'Arimo';
+    font-size: 10px;
+    font-weight: bolder;
+    color: #383838;
+    text-align: right;
+    z-index: 9999;
+    transition: .9s;
 }
 
 .textoDark li .container label{
   color : #FAFAFA !important;
 }
+
+/* Item container Ends Here */
 /* Content Section Ends Here*/
