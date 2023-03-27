@@ -1,0 +1,42 @@
+@media (max-width:600px) {
+
+    /* Page top section */
+    .logo {
+        width: 150px !important;
+        padding-top: 10px;
+    }
+
+    .options ul li img {
+        width: 25px !important;
+        margin-top: 15px !important;
+    }
+
+    /* Page top section ends here */
+
+    /* Date section */
+
+    .date p {
+        padding-top: 5px !important;
+        font-size: 25px !important;
+    }
+
+    /* Date section */
+
+    /* Content section */
+    .content {
+        width: 100% !important;
+    }
+
+    .container input[type="checkbox"] {
+        margin: 2px 2px 2px 10px !important;
+    }
+
+    .container label {
+        margin-left: 30px !important;
+    }
+
+    .container img {
+        margin-right: 10px;
+    }
+
+}

@@ -5,6 +5,10 @@
 
 body {
     margin: 0px !important;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    appearance: none;
     background-color: #FDFDFD;
     transition: .5s;
 }
@@ -21,6 +25,7 @@ body {
 .logo {
     width: 200px;
     margin-left: 20px;
+    transition: 0.5s;
 }
 
 .pageLogo {
@@ -54,6 +59,7 @@ body {
     margin-top: 10px;
     padding: 2px;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .options ul li img:hover {
@@ -207,7 +213,7 @@ body {
     font-family: 'Arimo';
     font-size: 30px;
     color: #2D2017;
-    transition: 0.5s;
+    transition: .5s;
 }
 
 .date a {
@@ -223,6 +229,7 @@ body {
     width: 55%;
     border-top: 2px solid #bb9a85;
     margin: 0 auto;
+    transition: .5s;
 }
 
 .list ul {
@@ -311,17 +318,6 @@ body {
 
 /* Container ends here */
 
-/* Edit task */
-
-
-
-
-/*
-
-*/
-
-/* Edit task ends here */
-
 /* Content Section Ends Here*/
 
 .textoDark li .container label{
@@ -332,3 +328,4 @@ body {
     text-decoration: line-through;
     color: #2d20177e !important; 
 }
+

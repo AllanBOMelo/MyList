@@ -37,7 +37,6 @@ var itemListPattern = function (text) {
                 '<label for="check'+ quantidade +'" id="' + quantidade + '">' + text + '</label>' +
                 '<img src="./img/edit.png" alt="" onclick="openEditTaskModalWindow(' + quantidade + '), setvalue(' + quantidade + ')"></img>' +
 
-                
             '</div>' 
             
         );
