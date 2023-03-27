@@ -11,12 +11,68 @@ body {
 
 /* Top Page Section */
 
+.TopPage {
+    width: 100%;
+    height: 65px;
+    padding-top: 10px;
+    border-bottom: 1px solid #BB9A85;
+}
+
+.logo {
+    width: 200px;
+    margin-left: 20px;
+}
+
+.pageLogo {
+    display: inline-block;
+}
+
+.options {
+    float: right;
+    margin-right: 10px;
+}
+
+.options ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.options ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding-right: 15px;
+}
+
+.options ul li div {
+    position: relative;
+    display: inline-block;
+}
+
+.options ul li img {
+    width: 30px;
+    height: auto;
+    margin-top: 10px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.options ul li img:hover {
+    background-color: #00000015;
+    border: none;
+    border-radius: 5px;
+}
+
+
+/* Top Page Section Ends Here */
+
+
+
+/* Modal Window */
+
 .body {
     width: 100%;
     height: 100%;
 }
-
-/* Modal Window */
 
 .modal {
     padding: 20px 10px 20px 10px;
@@ -139,61 +195,6 @@ body {
 
 /* Modal Window Ends here*/
 
-.TopPage {
-    width: 100%;
-    height: 65px;
-    padding-top: 10px;
-    border-bottom: 1px solid #BB9A85;
-}
-
-.logo {
-    width: 200px;
-    margin-left: 20px;
-    transition: .5s;
-}
-
-.pageLogo {
-    display: inline-block;
-}
-
-.options {
-    float: right;
-    margin-right: 10px;
-}
-
-.options ul {
-    margin: 0px;
-    padding: 0px;
-}
-
-.options ul li {
-    list-style-type: none;
-    display: inline-block;
-    padding-right: 15px;
-}
-
-.options ul li div {
-    position: relative;
-    display: inline-block;
-}
-
-.options ul li img {
-    width: 30px;
-    height: auto;
-    margin-top: 10px;
-    padding: 2px;
-    cursor: pointer;
-}
-
-.options ul li img:hover {
-    background-color: #00000015;
-    border: none;
-    border-radius: 5px;
-}
-
-
-/* Top Page Section Ends Here */
-
 
 
 /* Date Section */
@@ -308,65 +309,26 @@ body {
     border-radius: 5px;
 }
 
-.edit-task-modal-window {
-    display: none;
-}
+/* Container ends here */
 
-.edit-task {
-    width: 250px;
-    height: 40px;
-    position: absolute;
-    right: 1px;
-    bottom: -20px;
-    background-color: #bb9a85;
-    display: inline-block;
-    border-radius: 5px;
-}
+/* Edit task */
 
-.openEditTask {
-    display: inline-block;
-}
 
-.edit-task input {
-    margin: 10px 5px 0px 10px;
-    border: none;
-    border-radius: 5px;
-    padding: 3px;
-}
 
-.edit-task input:focus {
-    outline: none;
-}
 
-.edit-task button {
-   border: none;
-   border-radius: 5px;
-   width: 50px;
-   height: 20px;
-}
+/*
 
-.character-counter-edit-task {
-    width: 30px;
-    height: 12px;
-    resize: none;
-    overflow:hidden;
-    border: none;
-    background-color: transparent;
-    position: absolute;
-    right: 0px;
-    bottom: -17px;
-    font-family: 'Arimo';
-    font-size: 10px;
-    font-weight: bolder;
-    color: #383838;
-    text-align: right;
-    z-index: 9999;
-    transition: .9s;
-}
+*/
+
+/* Edit task ends here */
+
+/* Content Section Ends Here*/
 
 .textoDark li .container label{
-  color : #FAFAFA !important;
-}
+    color : #FAFAFA !important;
+  }
 
-/* Item container Ends Here */
-/* Content Section Ends Here*/
+.taskDone {
+    text-decoration: line-through;
+    color: #2d20177e !important; 
+}

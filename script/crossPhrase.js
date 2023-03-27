@@ -1,11 +1,16 @@
 var cross = (idNumber) => {
 
     var id = idNumber.toString();
+    var taskId = document.getElementById(id);
 
-    if (document.getElementById(id).style.textDecoration === "line-through") {
-        document.getElementById(id).style.textDecoration = "none";
+    if (taskId.classList.contains('taskDone')) {
+
+        taskId.classList.remove('taskDone');
+
     } else {
-        document.getElementById(id).style.textDecoration = "line-through";
+        
+        taskId.classList.add('taskDone');
+
     }
     
 }

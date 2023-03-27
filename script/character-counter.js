@@ -5,19 +5,15 @@ const charactersCounter = () => {
     var character = string.length
 
     document.getElementById('character-counter').value = character + '/50'
+    
 
 }
 
-const charactersCounterEditTask = (x) => {
-    var inputEditTaskId = 'input-edit-task-' + x
-    var characterCounteEditTask = 'character-counter-edit-task-' + x
-
-    var string = document.getElementById(inputEditTaskId).value;
+const charactersCounterEditTask = () => {
+    var string = document.getElementById('inputEditTask').value;
 
     var character = string.length
 
-    document.getElementById(characterCounteEditTask).value = character + '/50'
-
+    document.getElementById('character-counter-edit-task').value = character + '/50'
+    
 }
-
-

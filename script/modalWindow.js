@@ -10,56 +10,6 @@ const openModalWindow = () => {
     document.getElementById('character-counter').value = character + '/50'
 }
 
-const openEditTaskModalWindow = (x) => {
-    var editTaskModalWindow = 'edit-task-modal-window-' + x
-    var characterCounterEditTask = 'character-counter-edit-task-' + x
-    var inputEditTask = '#input-edit-task-' + x
-
-    outClickCheck(x);
-
-    document.getElementById(editTaskModalWindow).classList.add('openEditTask');
-
-    var taskID = x.toString();
-    var texto = document.getElementById(taskID).innerHTML
-
-    document.querySelector(inputEditTask).value = texto;
-
-    var character = texto.length
-
-    document.getElementById(characterCounterEditTask).value = character + '/50'
-}
-
-
-
-const editTask = (x) => {
-    var taskID = x.toString()
-    var inputID = '#input-edit-task-' + x
-
-    var newTask = document.querySelector(inputID).value;
-
-    document.getElementById(taskID).innerHTML = newTask;
-
-    var editTaskId = 'edit-task-modal-window-' + x
-    document.getElementById(editTaskId).classList.remove('openEditTask');
-}
-
-
-
-const outClickCheck = (x) => {
-    document.addEventListener("mouseup", function(event) {
-
-        var editTaskId = 'edit-task-modal-window-' + x
-        
-        var editTask = document.getElementById(editTaskId);
-
-        if (!editTask.contains(event.target)) {
-            document.getElementById(editTaskId).classList.remove('openEditTask');
-        }
-    });
-}
-
-
-
 // Close modal window when outside click
 document.addEventListener("mouseup", function(event) {
     var modalWindow = document.getElementById("modal");
@@ -69,7 +19,6 @@ document.addEventListener("mouseup", function(event) {
     }
 
 });
-
 
 // Modal input task buttons
 const botaoCancel = document.querySelector("#Cancel");
@@ -100,3 +49,79 @@ botaoSend.addEventListener('click', function(e) {
 
     document.querySelector("#textForm").value = "";
 });
+
+
+// Modal input task buttons ends here
+
+// task value
+
+var taskValue = 0
+
+const setvalue = (x) =>{
+    taskValue = x
+}
+
+
+// Edit task Modal Window
+
+const openEditTaskModalWindow = (x) => {
+
+    // Vars
+    var editTaskModalWindow = document.getElementById('modal-window-edit-task');
+    var text = document.getElementById(x).innerHTML;
+    var inputId = document.getElementById('inputEditTask');
+
+    // Open Modal window
+    editTaskModalWindow.classList.add('open');
+    outClickCheck();
+
+
+    // Text Load
+    inputId.value = text;
+    charactersCounterEditTask();
+
+}
+
+// Form Buttons
+var sendButton = document.getElementById('sendButtonEditTask')
+sendButton.addEventListener('click', function (e) {
+
+    e.preventDefault();
+
+    var editTaskModalWindow = document.getElementById('modal-window-edit-task');
+    const labelId = document.getElementById(taskValue)
+    const inputId = document.getElementById('inputEditTask');
+
+    labelId.innerHTML = inputId.value
+
+    editTaskModalWindow.classList.remove('open');
+
+})
+
+var cancelButton = document.getElementById('cancelButtonEditTask')
+cancelButton.addEventListener('click', function (e) {
+
+    e.preventDefault();
+
+    document.getElementById('modal-window-edit-task').classList.remove('open');
+
+})
+
+// Edit task outclick check
+
+const outClickCheck = () => {
+    document.addEventListener("mouseup", function(event) {
+        
+        var editTask = document.getElementById('modal-edit-task');
+
+        if (!editTask.contains(event.target)) {
+            document.getElementById('modal-window-edit-task').classList.remove('open');
+        }
+    });
+}
+
+
+
+
+
+

@@ -32,20 +32,14 @@ var itemListPattern = function (text) {
 
         
             '<div class="container">' +
+
                 '<input type="checkbox" id="check'+ quantidade +'" name="check" onclick="cross(' + quantidade + ')">' +
-                '<label for="check'+ quantidade +'" id="' + quantidade + '" style="text-decoration: none;">' + text + '</label>' +
-                '<img src="./img/edit.png" alt="" onclick="openEditTaskModalWindow(' + quantidade + ')"></img>' +
-                '<div class="edit-task-modal-window" id="edit-task-modal-window-' + quantidade + '">' +
-                                '<div class="edit-task" id="edit-task-' + quantidade + '">' +
-                                    '<input type="text" id="input-edit-task-' + quantidade + '" maxlength="50" oninput="charactersCounterEditTask(' + quantidade + ')">' +
-                                    '<button type="submit" onclick="editTask(' + quantidade + ')">Save</button>' +
-                                    '<textarea class="character-counter-edit-task" id="character-counter-edit-task-' + quantidade + '" cols="30" rows="10" disabled>0/50</textarea>' +
-                                '</div>' +
-                            '</div>' +
+                '<label for="check'+ quantidade +'" id="' + quantidade + '">' + text + '</label>' +
+                '<img src="./img/edit.png" alt="" onclick="openEditTaskModalWindow(' + quantidade + '), setvalue(' + quantidade + ')"></img>' +
+
+                
             '</div>' 
             
         );
 }
-
-
 

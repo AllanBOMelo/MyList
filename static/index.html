@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="shortcut icon" href="./img/FavIcon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./StyleSheet/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -16,9 +14,9 @@
     <!-- TOP LAYOUT -->
     <div class="TopPage">
 
-        <div id="pageLogo" class="pageLogo">   
+        <div class="pageLogo">   
 
-            <img src="./img/LogoDark.png" alt="PageLogo" class="logo">  
+            <img src="./img/LogoDark.png" alt="PageLogo" class="logo" id="pageLogo">  
 
         </div>
         
@@ -27,15 +25,11 @@
 
         <ul>
 
-            <li>
-                <div id="iconButton">
-                    <img src="./img/addIcon.png" alt="AddIcon" onclick="openModalWindow()" id="addIcon">
-                </div>
+            <li>             
+                <img src="./img/addIcon.png" alt="AddIcon" onclick="openModalWindow()" id="addIcon">
             </li>     
             <li>
-                <div id="button">
-                    <img src="./img/theme.png" alt="ThemeIcon" onclick="toggleThemeDark()" id="toggle" >
-                </div>
+                <img src="./img/theme.png" alt="ThemeIcon" onclick="toggleThemeDark()" id="toggleTheme" >
             </li>
             
         </ul>
@@ -64,9 +58,30 @@
                             <input type="submit" id="Cancel" value="Cancel" class="optionCancel">
                             <input type="submit" id="Send" value="Send" class="optionSend">
                         </div>
-                        <script src="character-counter.js"></script>
+                        
                     </form>
                 </div>  
+            </div>
+        </div>
+
+        <div class="modal-window" id="modal-window-edit-task">
+            <div class="modal" id="modal-edit-task">
+                 <form action=""> 
+                    <span>Editar Tarefa</span>
+
+                    <div class="inputTaskLabel">
+
+                        <input type="text" name="" id="inputEditTask" class="inputTask" autocomplete="off" 
+                        maxlength="50" oninput="charactersCounterEditTask()">
+
+                        <textarea class="character-counter" id="character-counter-edit-task" cols="30" rows="10" disabled>0/50</textarea>
+                    </div>
+                    <div class="formOptions">
+                        <input type="submit" value="Cancel" class="optionCancel" id="cancelButtonEditTask">
+                        <input type="submit" value="Send" class="optionSend" id="sendButtonEditTask" >
+                    </div>
+
+                 </form>
             </div>
         </div>
 
@@ -97,6 +112,7 @@
     
 
     <!-- SCRIPT -->
+    <script src="character-counter.js"></script>
     <script src="newItem.js"></script>
     <script src="toggleTheme.js"></script>
     <script src="crossPhrase.js"></script>
