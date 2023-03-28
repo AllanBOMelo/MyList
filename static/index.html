@@ -51,10 +51,20 @@
                         <span>Insira a tarefa</span>
                         <div class="inputTaskLabel">
 
-                            <input type="text" name="" id="textForm" class="inputTask" autocomplete="off" 
-                            maxlength="50" oninput="charactersCounter()">
+                            <div class="inputTask">
 
-                            <textarea class="character-counter" id="character-counter" cols="30" rows="10" disabled>0/50</textarea>
+                                <input type="time" id="time-input-task">
+
+                                <div class="character-counter-label">
+                                    <input type="text" name="" id="textForm" autocomplete="off" 
+                                    maxlength="50" oninput="charactersCounter()">
+
+                                    <textarea class="character-counter" id="character-counter" cols="30" rows="10" disabled>0/50</textarea>
+                                </div>
+
+                            </div>
+                        
+                            
                         </div>
                         <div class="formOptions">
                             <input type="submit" id="Cancel" value="Cancel" class="optionCancel">
@@ -73,10 +83,20 @@
 
                     <div class="inputTaskLabel">
 
-                        <input type="text" name="" id="inputEditTask" class="inputTask" autocomplete="off" 
-                        maxlength="50" oninput="charactersCounterEditTask()">
+                        <div class="inputTask">
+                            <input type="time" id="editHourId">
 
-                        <textarea class="character-counter" id="character-counter-edit-task" cols="30" rows="10" disabled>0/50</textarea>
+                        <div class="character-counter-label">
+
+                            <input type="text" name="" id="inputEditTask" class="inputTask" autocomplete="off" 
+                            maxlength="50" oninput="charactersCounterEditTask()">
+
+                            <textarea class="character-counter" id="character-counter-edit-task" cols="30" rows="10" disabled>0/50</textarea>
+                        </div>
+
+                        </div>
+                        
+
                     </div>
                     <div class="formOptions">
                         <input type="submit" value="Cancel" class="optionCancel" id="cancelButtonEditTask">
@@ -86,6 +106,8 @@
                  </form>
             </div>
         </div>
+
+        <!-- Date-->
 
         <div class="date" id="date">
         
@@ -99,7 +121,7 @@
     
         <div class="content">
     
-            <div class="list" >
+            <div class="list" id="listDiv">
                 <ul id="list">
                     
                 </ul>

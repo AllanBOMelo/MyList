@@ -4,4 +4,13 @@ var dia = data.getDate();
 var mes = data.getMonth() + 1;
 var ano = data.getFullYear();
 
-document.getElementById('date').innerHTML = '<p id="datep" style="color: #2D2017;">' + dia + "<a> - </a> " + mes + "<a> - </a> " + ano + "<p>";
+var pElement = document.createElement('p');
+var idAtribute = document.createAttribute('id');
+
+idAtribute.value = 'datep'
+
+pElement.attributes.setNamedItem(idAtribute);
+
+pElement.innerHTML = dia + "<a>.</a> " + mes + "<a>.</a> " + ano;
+
+document.getElementById('date').appendChild(pElement)

@@ -1,9 +1,9 @@
 var quantidade = 0;
 
 
-function newItemFunction(text) {     
+function newItemFunction(text, fullhour) {     
     
-    quantidade += 1
+    
 
     /* tags */
     var li = document.createElement('li');
@@ -14,31 +14,96 @@ function newItemFunction(text) {
 
     li.attributes.setNamedItem(idLi)
 
-    document.getElementById('list').appendChild(li)
+    /* content */
 
-    document.getElementById('li'+quantidade).innerHTML = itemListPattern(text);
+    if (fullhour == "") {
+
+        var contentText = text
+
+        document.getElementById('list').appendChild(li)
+        document.getElementById('li'+quantidade).innerHTML = itemListPattern(contentText);
+
+    } else {
+
+        var hourArray = fullhour.split(':')
+        var hour = hourArray[0]
+        var contentText = fullhour + " | " + text;
+        var taskLabelTarget = document.getElementById("TaskLabel" + hour)
+        
+
+        if (document.getElementById("TaskLabel" + hour )) {
+            
+            if (taskLabelTarget.childNodes.length > 0) {
+                document.getElementById("TaskLabel" + hour ).appendChild(li);
+                document.getElementById('li'+quantidade).innerHTML = itemListPattern(contentText);
+            } else {
+                document.getElementById("TaskLabel" + hour ).appendChild(li);
+                document.getElementById('li'+quantidade).innerHTML = itemListPatternHour(contentText);
+            }
+
+            
+
+        } else {
+
+            /* Elements */
+            const listDiv = document.getElementById('listDiv');
+            const ulList = document.createElement('ul')
+            const ulId = document.createAttribute('id')
+            ulId.value = "TaskLabel" + hour        
+
+            ulList.attributes.setNamedItem(ulId)
+
+            listDiv.appendChild(ulList)
+
+            document.getElementById("TaskLabel" + hour ).appendChild(li);
+
+            document.getElementById('li'+quantidade).innerHTML = itemListPatternHour(contentText, hour);
+
+        }
+
+
+    }
+
+    
 
     
     
     /* Add to MySql */
 
 
+    quantidade += 1
 }
 
 
-var itemListPattern = function (text) {
+var itemListPattern = function (content) {
 
     return (
-
         
             '<div class="container">' +
 
                 '<input type="checkbox" id="check'+ quantidade +'" name="check" onclick="cross(' + quantidade + ')">' +
-                '<label for="check'+ quantidade +'" id="' + quantidade + '">' + text + '</label>' +
-                '<img src="./img/edit.png" alt="" onclick="openEditTaskModalWindow(' + quantidade + '), setvalue(' + quantidade + ')"></img>' +
+                '<label for="check'+ quantidade +'" id="' + quantidade + '">' + content + '</label>' +
+                '<img src="./img/edit.png" alt="" onclick="openEditTaskModalWindow(' + quantidade + ')"></img>' +
 
             '</div>' 
             
         );
 }
 
+
+var itemListPatternHour = function (content, hour) {
+
+    return (
+
+
+            '<span class="hourTask"> Atividades para as ' + hour + ' horas</span>' +        
+            '<div class="container">' +
+
+                '<input type="checkbox" id="check'+ quantidade +'" name="check" onclick="cross(' + quantidade + ')">' +
+                '<label for="check'+ quantidade +'" id="' + quantidade + '">' + content + '</label>' +
+                '<img src="./img/edit.png" alt="" onclick="openEditTaskModalWindow(' + quantidade + ')"></img>' +
+
+            '</div>' 
+            
+        );
+}

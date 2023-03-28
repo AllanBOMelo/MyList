@@ -13,6 +13,8 @@
 
     /* Page top section ends here */
 
+
+
     /* Date section */
 
     .date p {
@@ -21,6 +23,8 @@
     }
 
     /* Date section */
+
+
 
     /* Content section */
     .content {
@@ -37,6 +41,22 @@
 
     .container img {
         margin-right: 10px;
+    }
+    /* Content section ends here */
+
+    /* Modal window */
+    .modal {
+        width: 100% !important;
+        border-radius: 0px !important;
+    }
+
+
+    .inputTask input[type="text"] {
+        width: 220px !important;
+    }
+
+    .character-counter-label {
+        width: 250px !important
     }
 
 }
