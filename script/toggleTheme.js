@@ -11,9 +11,13 @@ const pageLogo = document.getElementById('pageLogo');
         document.getElementById('list').classList.add('textoDark');
         document.getElementById('hourList').classList.add('textoDark');
 
+        document.getElementById('addIconLi').classList.add('optionsHoverDarkMode')
+        document.getElementById('toggleThemeLi').classList.add('optionsHoverDarkMode')
+
         /* Img icon change */
 
         toggleThemeIcon.src = "./img/themeLight.png"
+        toggleThemeIcon.style.transform = "scalex(-1)"
         addTaskIcon.src = "./img/addIconLight.png"
         pageLogo.src = "./img/LogoLight.png"
 
@@ -31,9 +35,13 @@ const pageLogo = document.getElementById('pageLogo');
         document.getElementById('list').classList.remove('textoDark');
         document.getElementById('hourList').classList.remove('textoDark');
 
+        document.getElementById('addIconLi').classList.remove('optionsHoverDarkMode')
+        document.getElementById('toggleThemeLi').classList.remove('optionsHoverDarkMode')
+
         /* Img icon change */
 
         toggleThemeIcon.src = "./img/theme.png"
+        toggleThemeIcon.style.transform = "scalex(1)"
         addTaskIcon.src = "./img/addIcon.png"
         pageLogo.src = "./img/LogoDark.png"
 

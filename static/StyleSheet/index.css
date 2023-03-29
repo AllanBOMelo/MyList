@@ -40,12 +40,36 @@ body {
 .options ul {
     margin: 0px;
     padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(2, 55px);
+    grid-template-rows: repeat(1, 35px);
+    grid-template-areas: 
+    "a a b b"
+    "a a b b"
+    ;
+
+    align-content: start;
+    justify-content: space-around;
 }
 
 .options ul li {
     list-style-type: none;
-    display: inline-block;
-    padding-right: 15px;
+    margin-right: 20px;
+    margin-top: 10px;
+    height: 35px;
+    transition: .5s;
+}
+
+#addIcon {
+    grid-area: a;
+    align-self: center;
+    justify-self: center;
+}
+
+#toggleTheme {
+    grid-area: b;
+    align-self: center;
+    justify-self: center;
 }
 
 .options ul li div {
@@ -56,18 +80,20 @@ body {
 .options ul li img {
     width: 30px;
     height: auto;
-    margin-top: 10px;
-    padding: 2px;
     cursor: pointer;
     transition: 0.5s;
+    padding: 2px;
 }
 
-.options ul li img:hover {
+.options ul li:hover {
     background-color: #00000015;
     border: none;
     border-radius: 5px;
 }
 
+.optionsHoverDarkMode:hover {
+    background-color: #ffffff15 !important;
+}
 
 /* Top Page Section Ends Here */
 

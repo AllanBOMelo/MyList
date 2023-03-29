@@ -7,6 +7,7 @@ function newItemFunction(text, fullhour) {
 
     /* tags */
     var li = document.createElement('li');
+    const ulId = "TaskLabel" + hour
 
     /* Atributes */
     var idLi = document.createAttribute('id');
@@ -36,6 +37,7 @@ function newItemFunction(text, fullhour) {
             if (taskLabelTarget.childNodes.length > 0) {
                 document.getElementById("TaskLabel" + hour ).appendChild(li);
                 document.getElementById('li'+quantidade).innerHTML = itemListPattern(contentText);
+                sortTasks(quantidade)
             } else {
                 document.getElementById("TaskLabel" + hour ).appendChild(li);
                 document.getElementById('li'+quantidade).innerHTML = itemListPatternHour(contentText);

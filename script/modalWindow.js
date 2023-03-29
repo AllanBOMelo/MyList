@@ -149,9 +149,3 @@ const outClickCheck = () => {
         }
     });
 }
-
-
-
-
-
-
