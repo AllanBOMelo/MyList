@@ -8,12 +8,18 @@ function newItemFunction(text, fullhour) {
     /* tags */
     var li = document.createElement('li');
     const ulId = "TaskLabel" + hour
+    var hourArray = fullhour.split(':')
+    var hour = hourArray[0]
+    var minutes = hourArray[1]
 
     /* Atributes */
     var idLi = document.createAttribute('id');
     idLi.value = "li"+quantidade;
+    var nameLi = document.createAttribute('name')
+    nameLi.value = "li"+minutes
 
     li.attributes.setNamedItem(idLi)
+    li.attributes.setNamedItem(nameLi)
 
     /* content */
 
@@ -26,8 +32,7 @@ function newItemFunction(text, fullhour) {
 
     } else {
 
-        var hourArray = fullhour.split(':')
-        var hour = hourArray[0]
+        
         var contentText = fullhour + " | " + text;
         var taskLabelTarget = document.getElementById("TaskLabel" + hour)
         
@@ -37,7 +42,7 @@ function newItemFunction(text, fullhour) {
             if (taskLabelTarget.childNodes.length > 0) {
                 document.getElementById("TaskLabel" + hour ).appendChild(li);
                 document.getElementById('li'+quantidade).innerHTML = itemListPattern(contentText);
-                sortTasks(quantidade)
+                sortTasks(hour)
             } else {
                 document.getElementById("TaskLabel" + hour ).appendChild(li);
                 document.getElementById('li'+quantidade).innerHTML = itemListPatternHour(contentText);

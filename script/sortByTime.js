@@ -23,3 +23,21 @@ const sortByTime = () => {
 
 }
 
+const sortTasks= (hour) => {
+
+    const taskLabel = document.getElementById("TaskLabel" + hour)
+
+    const tasks =  taskLabel.querySelectorAll("li");
+    const tasksArray = Array.from(tasks);
+
+    // Sort array
+    tasksArray.sort((x, y) => {
+
+      const id1 = parseInt(x.getAttribute('name').slice(2));
+      const id2 = parseInt(y.getAttribute('name').slice(2));
+
+      return id1 - id2;
+
+    });
+      tasksArray.forEach(tasksArray => taskLabel.appendChild(tasksArray))
+}
