@@ -46,7 +46,7 @@ function newItemFunction(text, fullhour) {
         } else {
 
             /* Elements */
-            const listDiv = document.getElementById('listDiv');
+            const listDiv = document.getElementById('hourList');
             const ulList = document.createElement('ul')
             const ulId = document.createAttribute('id')
             ulId.value = "TaskLabel" + hour        
@@ -62,15 +62,9 @@ function newItemFunction(text, fullhour) {
         }
 
 
-    }
-
-    
-
-    
+    } 
     
     /* Add to MySql */
-
-
     quantidade += 1
 }
 

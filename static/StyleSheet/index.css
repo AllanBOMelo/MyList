@@ -132,7 +132,11 @@ body {
 .inputTask {
     display: inline-block;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto; 
+}
+
+.inputTask input {
+    transition: .5s;
 }
 
 .character-counter-label {
@@ -171,14 +175,21 @@ body {
 }
 
 .formOptions {
-    padding-top: 9px;
-    float: right;
-    width: 190px;
+    width: 330px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 25px;
+    transition: .5s;
+}
+
+.formOptions input {
+    position: absolute;
 }
 
 .optionSend{
-    display: inline-block !important;
-    margin-top: 10px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 15px;
     border: none;
     height: 30px;
     width: 80px;
@@ -188,15 +199,18 @@ body {
     color: #FAFAFA;
     background-color: #FF6300;
     background: radial-gradient(#FF6300 45%, #d45100);
+    right: 0px;
 }
 
 .optionSend:hover {
     background-color: #c94d00;
+    cursor: pointer;
 }
 
 .optionCancel{
-    display: inline-block !important;
-    margin-top: 10px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 15px;
     margin-right: 20px;
     border: none;
     height: 30px;
@@ -206,10 +220,12 @@ body {
     font-size: 15px;
     color: #2D2017;
     background: radial-gradient(#FFF 25%, #e7e7e7);
+    right: 80px;
 }
 
 .optionCancel:hover {
     background-color: #cecaca;
+    cursor: pointer;
 }
 
 .character-counter {
@@ -285,6 +301,7 @@ body {
     font-family: 'Arimo';
     font-size: 17px;
     color: #2D2017;
+    transition: .5s;
 }
 
 /* Item container */
@@ -335,7 +352,7 @@ body {
 .container label {
     padding-left: 20px;
     color: #2D2017;
-    font-size: clamp(16px, 2vw, 20px);
+    font-size: 17px;
     font-family: 'Arimo';
     cursor: pointer;
     margin: 2px;
@@ -368,6 +385,10 @@ body {
 .textoDark li .container label{
     color : #FAFAFA !important;
   }
+
+.textoDark li span{
+    color : #FAFAFA !important;
+}  
 
 .taskDone {
     text-decoration: line-through;

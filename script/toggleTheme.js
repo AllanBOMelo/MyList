@@ -9,6 +9,7 @@ const pageLogo = document.getElementById('pageLogo');
         body.style.backgroundColor = "#141414";
         document.getElementById('datep').style.color = "#F2F2F2";
         document.getElementById('list').classList.add('textoDark');
+        document.getElementById('hourList').classList.add('textoDark');
 
         /* Img icon change */
 
@@ -28,6 +29,7 @@ const pageLogo = document.getElementById('pageLogo');
         body.style.backgroundColor = "#FDFDFD";
         document.getElementById('datep').style.color = "#2D2017";
         document.getElementById('list').classList.remove('textoDark');
+        document.getElementById('hourList').classList.remove('textoDark');
 
         /* Img icon change */
 

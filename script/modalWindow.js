@@ -52,6 +52,8 @@ botaoSend.addEventListener('click', function(e) {
     document.querySelector("#textForm").value = "";
     document.getElementById("time-input-task").value = "";
 
+    sortByTime()
+
 });
 
 
@@ -122,6 +124,7 @@ sendButton.addEventListener('click', function (e) {
     }
 
     editTaskModalWindow.classList.remove('open');
+    sortByTime()
 
 })
 
