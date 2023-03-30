@@ -3,7 +3,15 @@
     src: url(../StyleSheet/font-family/Arimo-VariableFont_wght.ttf);
 }
 
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     margin: 0px !important;
     padding: 0px;
     -webkit-box-sizing: border-box;
@@ -25,7 +33,7 @@ body {
 }
 
 .TopPageDark {
-    box-shadow: 0px -3px 10px 7px #140e0ada;
+    box-shadow: 0px -2px 10px 7px #000000da;
 }
 
 .logo {
@@ -260,6 +268,13 @@ body {
     cursor: pointer;
 }
 
+.optionDelete {
+    width: auto;
+    height: 20px;
+    top: 20px;
+    left: 5px;
+}
+
 .character-counter {
     width: 30px;
     height: 12px;
@@ -392,6 +407,7 @@ body {
     transition: 0.5s;
     margin-left: 20px;
     margin-right: 10px;
+    justify-content: center;
     width: 100%;
 }
 
@@ -427,3 +443,71 @@ body {
     color: #2d20177e !important; 
 }
 
+footer {
+    margin-top: auto;
+    position: relative;
+    height: 140px;
+    top: 140px;
+    border-top: 1px solid #BB9A85;
+    box-shadow: -5px 0px 10px 7px #2d201749;
+    transition: .5s;
+}
+
+.footerDark {
+    box-shadow: -1px 5px 15px 7px #000000da !important;
+}
+
+.footerDark span {
+    color: #FAFAFA;
+}
+
+.footerDark h3 {
+    color: #FAFAFA;
+}
+
+footer span {
+    padding-top: 15px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: 'Arimo';
+    font-size: 15px;
+    font-weight: bold;
+    color: #2D2017;
+    transition: .5s;
+}
+
+footer ul {
+    display: flex;
+    width: 200px;
+    margin: 0 auto;
+    align-items: center;
+    padding: 0px;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 auto;
+    list-style: none;
+    padding-top: 10px;
+}
+
+footer ul li a img {
+    width: auto;
+    height: 35px;
+    padding: 5px;
+}
+
+footer ul li img:hover {
+    background-color: #00000010;
+    border-radius: 5px;
+}
+
+footer h3 {
+    display: block;
+    font-family: 'Arimo';
+    font-weight: bold;
+    text-align: center;
+    color: #2D2017;
+    transition: .5s;
+}

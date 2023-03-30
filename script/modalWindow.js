@@ -79,14 +79,22 @@ const openEditTaskModalWindow = (x) => {
 
 
     // Text Load
-    var inputText = text.split(" | ")
+    if (text.includes('|')) {
+        var inputText = text.split(" | ")
+        hourId.value = inputText[0]
+        inputId.value = inputText[1]
+        lastFullHour = hourId.value
+    } else {
+        inputId.value = text
+        lastFullHour = ""
+    }
 
-    hourId.value = inputText[0]
-    inputId.value = inputText[1]
+    lastLabelId = x;
+
+    
     charactersCounterEditTask();
 
-    lastFullHour = hourId.value
-    lastLabelId = x;
+    
 }
 
 // Form Buttons
@@ -95,6 +103,26 @@ sendButton.addEventListener('click', function (e) {
 
     e.preventDefault();
 
+    const hourId = document.getElementById('editHourId');
+
+    if (hourId.value == "") {
+        EditTask()
+    } else {
+        EditHourTask()
+    }
+
+    
+})
+
+const EditTask = () => {
+    const inputId = document.getElementById('inputEditTask');
+    document.getElementById(lastLabelId).innerHTML =  inputId.value
+
+    document.getElementById('modal-window-edit-task').classList.remove('open');
+}
+
+
+const EditHourTask = () => {
     var editTaskModalWindow = document.getElementById('modal-window-edit-task');
     const labelId = document.getElementById(lastLabelId)
     const inputId = document.getElementById('inputEditTask');
@@ -108,7 +136,7 @@ sendButton.addEventListener('click', function (e) {
     var minute = arrayHour[1]
 
     if (lastHour === hour ) {
-    
+        
         var text = hourId.value + " | " + inputId.value
         labelId.innerHTML = text
 
@@ -138,8 +166,7 @@ sendButton.addEventListener('click', function (e) {
     if (document.getElementById("TaskLabel" + hour).childNodes.length > 2) {
         sortTasks(hour)
     }
-
-})
+}
 
 var cancelButton = document.getElementById('cancelButtonEditTask')
 cancelButton.addEventListener('click', function (e) {
@@ -149,6 +176,16 @@ cancelButton.addEventListener('click', function (e) {
     document.getElementById('modal-window-edit-task').classList.remove('open');
 
 })
+
+var deleteButton = document.getElementById('deleteButtonEditTask')
+deleteButton.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const liId = document.getElementById("li" + lastLabelId)
+
+    liId.remove();
+    document.getElementById('modal-window-edit-task').classList.remove('open');
+});
 
 // Edit task outclick check
 

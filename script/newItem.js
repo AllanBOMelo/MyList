@@ -105,23 +105,3 @@ const spanAdd = (hour) => {
     
     span.innerHTML = "Atividades para as " +  hour + "h"
 }
-
-
-
-
-var itemListPatternHour = function (content, hour) {
-
-    return (
-
-
-            '<span class="hourTask"> Atividades para as ' + hour + ' horas</span>' +        
-            '<div class="container">' +
-
-                '<input type="checkbox" id="check'+ quantidade +'" name="check" onclick="cross(' + quantidade + ')">' +
-                '<label for="check'+ quantidade +'" id="' + quantidade + '">' + content + '</label>' +
-                '<img src="./img/edit.png" alt="" onclick="openEditTaskModalWindow(' + quantidade + ')"></img>' +
-
-            '</div>' 
-            
-        );
-}

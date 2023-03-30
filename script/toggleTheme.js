@@ -11,6 +11,7 @@ const pageLogo = document.getElementById('pageLogo');
         document.getElementById('datep').style.color = "#F2F2F2";
         document.getElementById('list').classList.add('textoDark');
         document.getElementById('hourList').classList.add('textoDark');
+        document.querySelector('footer').classList.add('footerDark')
 
         document.getElementById('addIconLi').classList.add('optionsHoverDarkMode')
         document.getElementById('toggleThemeLi').classList.add('optionsHoverDarkMode')
@@ -36,6 +37,7 @@ const pageLogo = document.getElementById('pageLogo');
         document.getElementById('TopPage').classList.remove('TopPageDark')
         document.getElementById('list').classList.remove('textoDark');
         document.getElementById('hourList').classList.remove('textoDark');
+        document.querySelector('footer').classList.remove('footerDark')
 
         document.getElementById('addIconLi').classList.remove('optionsHoverDarkMode')
         document.getElementById('toggleThemeLi').classList.remove('optionsHoverDarkMode')
