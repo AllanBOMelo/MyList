@@ -20,6 +20,12 @@ body {
     height: 65px;
     padding-top: 10px;
     border-bottom: 1px solid #BB9A85;
+    box-shadow: 0px -5px 10px 7px #2d201749;
+    transition: .5s;
+}
+
+.TopPageDark {
+    box-shadow: 0px -3px 10px 7px #140e0ada;
 }
 
 .logo {
@@ -322,7 +328,7 @@ body {
 
 .hourTask {
     display: block;
-    margin-top: 20px !important;
+    margin-top: 25px !important;
     border-bottom: 2px solid #bb9a85;
     font-family: 'Arimo';
     font-size: 17px;

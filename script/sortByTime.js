@@ -29,6 +29,9 @@ const sortTasks= (hour) => {
 
     const tasks =  taskLabel.querySelectorAll("li");
     const tasksArray = Array.from(tasks);
+    const spanElement = tasksArray[0] // Save the first element
+    tasksArray.shift() // Remove the first element
+    taskLabel.appendChild(spanElement) // Insert again into List
 
     // Sort array
     tasksArray.sort((x, y) => {

@@ -62,6 +62,7 @@ botaoSend.addEventListener('click', function(e) {
 
 // Edit task Modal Window
 var lastFullHour = '00:00'
+var lastMinute;
 var lastLabelId = "0"
 
 const openEditTaskModalWindow = (x) => {
@@ -102,12 +103,16 @@ sendButton.addEventListener('click', function (e) {
     var arrayHour = hourId.value.split(":");
     var lastArrayHour = lastFullHour.split(":")
     var lastHour = lastArrayHour[0]
+    lastMinute = lastArrayHour[1]
     var hour = arrayHour[0]
+    var minute = arrayHour[1]
 
     if (lastHour === hour ) {
     
         var text = hourId.value + " | " + inputId.value
         labelId.innerHTML = text
+
+        
 
     } else {
         const liRemove = "li" + lastLabelId
@@ -125,6 +130,14 @@ sendButton.addEventListener('click', function (e) {
 
     editTaskModalWindow.classList.remove('open');
     sortByTime()
+
+    var liName = "li" + lastMinute
+    var liToEdit = document.getElementsByName(liName)
+    liToEdit[0].setAttribute('name', 'li'+minute )
+
+    if (document.getElementById("TaskLabel" + hour).childNodes.length > 2) {
+        sortTasks(hour)
+    }
 
 })
 

@@ -7,6 +7,7 @@ const pageLogo = document.getElementById('pageLogo');
 
     function toggleThemeDark () {
         body.style.backgroundColor = "#141414";
+        document.getElementById('TopPage').classList.add('TopPageDark')
         document.getElementById('datep').style.color = "#F2F2F2";
         document.getElementById('list').classList.add('textoDark');
         document.getElementById('hourList').classList.add('textoDark');
@@ -32,6 +33,7 @@ const pageLogo = document.getElementById('pageLogo');
     function toggleThemeLight() {
         body.style.backgroundColor = "#FDFDFD";
         document.getElementById('datep').style.color = "#2D2017";
+        document.getElementById('TopPage').classList.remove('TopPageDark')
         document.getElementById('list').classList.remove('textoDark');
         document.getElementById('hourList').classList.remove('textoDark');
 

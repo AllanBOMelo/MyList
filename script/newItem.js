@@ -11,14 +11,14 @@ function newItemFunction(text, fullhour) {
     var hourArray = fullhour.split(':')
     var hour = hourArray[0]
     var minutes = hourArray[1]
+    
 
     /* Atributes */
     var idLi = document.createAttribute('id');
     idLi.value = "li"+quantidade;
-    var nameLi = document.createAttribute('name')
-    nameLi.value = "li"+minutes
-
     li.attributes.setNamedItem(idLi)
+    var nameLi = document.createAttribute('name')
+    nameLi.value = "li" + minutes
     li.attributes.setNamedItem(nameLi)
 
     /* content */
@@ -39,18 +39,16 @@ function newItemFunction(text, fullhour) {
 
         if (document.getElementById("TaskLabel" + hour )) {
             
-            if (taskLabelTarget.childNodes.length > 0) {
-                document.getElementById("TaskLabel" + hour ).appendChild(li);
-                document.getElementById('li'+quantidade).innerHTML = itemListPattern(contentText);
+            document.getElementById("TaskLabel" + hour ).appendChild(li);
+            document.getElementById('li'+quantidade).innerHTML = itemListPattern(contentText);
+            
+            if (taskLabelTarget.childNodes.length > 2) {
                 sortTasks(hour)
-            } else {
-                document.getElementById("TaskLabel" + hour ).appendChild(li);
-                document.getElementById('li'+quantidade).innerHTML = itemListPatternHour(contentText);
             }
 
-            
-
         } else {
+
+            
 
             /* Elements */
             const listDiv = document.getElementById('hourList');
@@ -61,10 +59,11 @@ function newItemFunction(text, fullhour) {
             ulList.attributes.setNamedItem(ulId)
 
             listDiv.appendChild(ulList)
+            spanAdd(hour)
 
             document.getElementById("TaskLabel" + hour ).appendChild(li);
 
-            document.getElementById('li'+quantidade).innerHTML = itemListPatternHour(contentText, hour);
+            document.getElementById('li'+quantidade).innerHTML = itemListPattern(contentText);
 
         }
 
@@ -90,6 +89,24 @@ var itemListPattern = function (content) {
             
         );
 }
+
+const spanAdd = (hour) => {
+    const li = document.createElement('li');
+    const ulId = document.getElementById("TaskLabel" + hour);
+    const span = document.createElement('span');
+    const spanClass = document.createAttribute('class');
+
+    spanClass.value = "hourTask"
+    span.attributes.setNamedItem(spanClass)
+
+
+    ulId.appendChild(li)
+    li.appendChild(span)
+    
+    span.innerHTML = "Atividades para as " +  hour + "h"
+}
+
+
 
 
 var itemListPatternHour = function (content, hour) {
