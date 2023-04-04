@@ -7,11 +7,6 @@
         padding-top: 10px;
     }
 
-    .options ul li img {
-        width: 25px !important;
-        margin-top: 15px !important;
-    }
-
     /* Page top section ends here */
 
 
@@ -19,7 +14,7 @@
     /* Date section */
 
     .date p {
-        padding-top: 5px !important;
+        padding-top: 20px !important;
         font-size: 25px !important;
     }
 

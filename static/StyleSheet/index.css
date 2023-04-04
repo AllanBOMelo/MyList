@@ -237,13 +237,12 @@ body {
     font-family: 'Arimo';
     font-size: 15px;
     color: #FAFAFA;
-    background-color: #FF6300;
     background: radial-gradient(#FF6300 45%, #d45100);
     right: 0px;
 }
 
 .optionSend:hover {
-    background-color: #c94d00;
+    background: #c94d00;
     cursor: pointer;
 }
 
@@ -264,7 +263,7 @@ body {
 }
 
 .optionCancel:hover {
-    background-color: #cecaca;
+    background: #cecaca;
     cursor: pointer;
 }
 
@@ -273,6 +272,13 @@ body {
     height: 20px;
     top: 20px;
     left: 5px;
+    transition: .5s;
+}
+
+.optionDelete:hover {
+    background: #cecaca;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 .character-counter {
